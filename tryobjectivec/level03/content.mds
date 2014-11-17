@@ -1,0 +1,33 @@
+boolean (BOOL), if, else, if else, isEqualToString, switch case, enum, Fast Enumeration:
+for (NSString *word in funnyWords) {
+     NSLog(@"%@ is a funny word", word);
+}
+funnyWords in an array here
+blocks, 
+   
+void (^logMessage)(void) = ^{
+     NSLog(@"Hello from inside the block");
+};
+
+void (^sumNumbers)(NSUInteger, NSUInteger) = ^(NSUInteger num1, NSUInteger num2){
+     NSLog(@"The sum of the numbers is %lu", num1 + num2);
+};
+
+enumerateObjectsUsingBlock:
+
+[funnyWords enumerateObjectsUsingBlock:
+  ^(NSString *word, NSUInteger index, BOOL *stop){
+         NSLog(@"%@ is a funny word", word);  
+           }
+];
+
+NSArray *newHats = @[@"Cowboy", @"Conductor", @"Baseball", 
+          @"Beanie", @"Beret", @"Fez"];
+
+
+[newHats enumerateObjectsUsingBlock:
+ ^(NSString *hat, NSUInteger index, BOOL *stop){
+       NSLog(@"Trying on hat %@", hat);
+        }
+];
+
